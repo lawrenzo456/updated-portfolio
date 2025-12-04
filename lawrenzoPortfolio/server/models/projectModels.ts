@@ -22,7 +22,7 @@ const pool = new Pool({
 
 export default {
   query: (text: string, params?: any[]): Promise<QueryResult<any>> => {
-    console.log('executed query', text);
+    console.log('executed query: ', text);
     return pool.query(text, params);
   },
 };

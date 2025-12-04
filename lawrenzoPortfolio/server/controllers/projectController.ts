@@ -14,12 +14,15 @@ projectController.getProject = async (
   next: NextFunction
 ) => {
   try {
-    const queryString = 'SELECT * FROM "Projects"';
-    const { rows } = await db.query(queryString); //set it to rows because we're trying to get the first row, the first instance of us getting to the query, and getting back what we want to.
+    const queryString = 'SELECT * FROM "Projects" ORDER BY "id"';
+    const query = await db.query(queryString); //set it to rows because we're trying to get the first row, the first instance of us getting to the query, and getting back what we want to.
 
-    console.log(rows);
+    // console.log(query);
+    const rows = query['rows'];
+    // console.log(rows);
+    console.log(rows[0]['project_link']);
     res.locals.projects = rows[0];
-    console.log(res.locals.projects);
+    // console.log(res.locals.projects);
     next();
   } catch (err: unknown) {
     return next({
