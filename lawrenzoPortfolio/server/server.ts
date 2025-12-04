@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //static files
 
+//routes
 app.get(
   '/projects',
   projectController.getProject,

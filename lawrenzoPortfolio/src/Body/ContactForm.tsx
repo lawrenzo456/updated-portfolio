@@ -11,7 +11,7 @@ type FormFields = {
 };
 
 const ContactForm = () => {
-  const { register, handleSubmit } = useForm<FormFields>(); //register is a property in useForm
+  const { register, handleSubmit } = useForm<FormFields>(); //register is a property in useForm - https://www.youtube.com/watch?v=cc_xmawJ8Kg
   const onSubmit: SubmitHandler<FormFields> = (data) => {
     console.log(data);
   }; //handleSubmit prevents default behavior of forms, and makes sure form fields are valid before calling the function. Once the data is valid, then we have a submit

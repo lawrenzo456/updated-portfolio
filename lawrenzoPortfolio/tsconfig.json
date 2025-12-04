@@ -1,11 +1,16 @@
 {
+  "compilerOptions": {
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ],
-
-  "compilerOptions": {
-    "suppressImplicitAnyIndexErrors": true
-  }
+  ]
 }
