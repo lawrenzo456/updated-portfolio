@@ -14,18 +14,18 @@ projectController.getProject = async (
   next: NextFunction
 ) => {
   try {
-    const queryString = 'SELECT * FROM projects';
-    const query = await db.query(queryString);
+    const queryString = 'SELECT * FROM "Projects"';
+    const { rows } = await db.query(queryString); //set it to rows because we're trying to get the first row, the first instance of us getting to the query, and getting back what we want to.
 
-    console.log(query);
-    res.locals.projects = query['rows'];
+    console.log(rows);
+    res.locals.projects = rows[0];
     console.log(res.locals.projects);
-    return next();
-  } catch (err) {
+    next();
+  } catch (err: unknown) {
     return next({
       log: 'Error in project controller',
       status: 500,
-      message: { err: 'projectController.getProject' },
+      message: { err: 'Project Controller Error' },
     });
   }
 };
