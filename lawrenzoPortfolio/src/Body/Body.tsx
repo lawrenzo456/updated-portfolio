@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import BodyItem from './BodyItem.tsx';
-import bodyCSS from './Body.css';
+import'./Body.css';
 
 const Body = () => {
   //make fetch request for project data here and create body items re: project items from taht array

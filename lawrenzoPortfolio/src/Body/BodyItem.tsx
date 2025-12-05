@@ -1,7 +1,7 @@
 //need a project segment section too
 import './Body.css';
 import ContactForm from './ContactForm.tsx';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import ProjectItem from './ProjectItem.tsx';
 // import ProjectItem from './ProjectItem.tsx';
 
