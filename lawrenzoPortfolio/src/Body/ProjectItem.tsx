@@ -1,6 +1,6 @@
-import bodyCSS from './Body.css';
+// import './Body.css';
 
 const ProjectItem = (props: any) => {
-  return <div className='projectSection'> Project Name: {props.label} </div>;
+  return <div className='projectTitle'> Project Name: {props.label} </div>;
 };
 export default ProjectItem;

@@ -23,7 +23,7 @@ projectController.getProject = async (
     console.log(rows[0]['project_link']);
     res.locals.projects = rows[0];
     // console.log(res.locals.projects);
-    next();
+    return next();
   } catch (err: unknown) {
     return next({
       log: 'Error in project controller',
