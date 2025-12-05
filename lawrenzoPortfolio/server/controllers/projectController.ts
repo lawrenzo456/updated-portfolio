@@ -20,8 +20,8 @@ projectController.getProject = async (
     // console.log(query);
     const rows = query['rows'];
     // console.log(rows);
-    console.log(rows[0]['project_link']);
-    res.locals.projects = rows[0];
+    // console.log(rows[0]['project_link']);
+    res.locals.projects = rows;
     // console.log(res.locals.projects);
     return next();
   } catch (err: unknown) {

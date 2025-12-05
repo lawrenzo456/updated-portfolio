@@ -30,11 +30,23 @@ const Body = () => {
   //have to review the creating new project components based on an array of how many projects
 
   return (
-    <div>
+    <div >
+      <h3 id='heading'> Introduction</h3>
       <BodyItem label='Introduction' />
+      <h3 id='heading'> Hero Section </h3>
+
       <BodyItem label='Hero Section' />
+      <h3 id='heading'> About Me </h3>
+
       <BodyItem label='About Me' />
+      <h3 id='heading' className='projectSection'>
+        {' '}
+        Projects{' '}
+      </h3>
+
       <BodyItem projectData={projects} label='Projects' />
+      <h3 id='heading'> Contact Me </h3>
+
       <BodyItem label='Contact Me' />
     </div>
   );
